@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>Spring Boot file upload example</h1>
+
+<form method="POST" action="/uploadExcelFile/"  th:action="@{/uploadExcelFile}" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xls,.xlsx" />
+    <pre>
+     Standard:<input type="text" name="standard" />
+     Division:<input type="text" name="division" />
+     Course ID:<input type="text" name="course_id" />
+     Teacher ID:<input type="text" name="teacher_id" />
+     Test Name:<input type="text" name="testname" />
+     Max Score:<input type="text" name="maxscore" />
+     
+    </pre>
+	
+     <input type="submit" value="Upload file" />
+      
+</form>
+
+</body>
+</html>

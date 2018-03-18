@@ -1,6 +1,9 @@
 package com.example.demo;
 
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 //import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -10,34 +13,34 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class attendance {
 
 private Date date;
-private String RollNumber;
+private String rollNumber;
 private Boolean status;
 
 
 
-public attendance(String RollNumber, Boolean status,Date date) {
+public attendance(String rollNumber, Boolean status,Date date) {
 	super();
-	this.RollNumber = RollNumber;
+	this.rollNumber = rollNumber;
 	this.status = status;
      this.date=date;
 	
 }
 
-public Date getDate() {
-
-	return date;
+public String getDate() {
+	String date1=date.toString();
+		return date1;
 }
 
-public void setDate(Date date) {
-
+public void setDate(Date date)  {
+	
        this.date = date;
 }
 
-public String getRollNumber() {
-	return RollNumber;
+public String getrollNumber() {
+	return rollNumber;
 }
-public void setRollNumber(String RollNumber) {
-	this.RollNumber = RollNumber;
+public void setRollNumber(String rollNumber) {
+	this.rollNumber = rollNumber;
 }
 public Boolean getStatus() {
 	return status;
